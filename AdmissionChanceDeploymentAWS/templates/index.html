@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Admission Prediction</title>
+        <style type="text/css">
+            body
+            {
+                padding: 0;
+                margin: 0;
+                background: lightcyan;
+            }
+            h1{
+                font-size: 5em;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+
+            }
+            gre_score{
+                font-size: 5em;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+    <div class="content">
+        <h1> Predict your chance of admission</h1>
+
+
+    <div class="form">
+        <form action="/predict" method="POST">
+           <center> <input type="number" name="gre_score" id="gre_score" placeholder="GRE Score"> </center><br>
+            <center><input type="number" name="toefl_score" id="toefl_score" placeholder="TOEFL Score"> </center><br>
+           <center> <input type="number" name="university_rating" id="university_rating" placeholder="University Rating"></center><br>
+           <center> <input type="number" name="sop" id="sop" placeholder="SOP Score"></center><br>
+            <center> <input type="number" name="lor" id="lor" placeholder="LOR Score"></center><br>
+            <center> <input type="number" name="cgpa" id="cgpa" placeholder="CGPA" step="any"></center><br>
+    
+           <center> Research  <br>     <select name="research" id="research" ></center>
+                <option value="yes">YES</option>
+                <option value="no">NO</option><br>
+            </select>
+    <br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+    </div>
+    </body>
+    </html>
